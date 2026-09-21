@@ -95,3 +95,16 @@ Kept and reworded on his order ("try it here stays for sure" / "and make it 10 s
 **Note:** the row name already links to the same instagram, so that destination is now reachable two ways from one row. Left as asked.
 
 **Undo:** delete the `Portfolio &rarr;` anchor from the `.pr` block.
+
+### 2026-09-21 (same day, follow-up) — Home Team sub-line removed
+
+**Why:** Lawrence: remove "Install, then monthly".
+
+**BEFORE:** `<div class="pr">$4,000 + $1,500 / mo<small>Install, then monthly</small>`
+**AFTER:** `<div class="pr">$4,000 + $1,500 / mo`
+
+**Row 06 now:** 06 · Home Team · Founder run Shopify & Amazon brands · $4,000 + $1,500 / mo · Book the install → · Free 15 minute call →
+
+**Note:** the price still reads `$4,000 + $1,500 / mo`, which carries the install-then-monthly shape on its own, so nothing became unclear.
+
+**Undo:** put the `<small>Install, then monthly</small>` back immediately after the price.
