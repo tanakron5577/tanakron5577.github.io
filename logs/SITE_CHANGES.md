@@ -83,3 +83,15 @@ Kept and reworded on his order ("try it here stays for sure" / "and make it 10 s
 **Undo:** restore that backup, or paste the BEFORE paragraph back into the row, then read the live page back.
 
 **Metric:** unmeasurable on its own. Recorded so it can be undone exactly.
+
+### 2026-09-21 (same day, follow-up) — Portfolio link added to row 03
+
+**Why:** Lawrence: "add PORTFOLIO and that leads to instagram.com/craneseyeview".
+
+**Added:** a first CTA on row 03, `Portfolio →`, to `https://instagram.com/craneseyeview`, ahead of "Start a jacket →" and "Free 15 minute call →".
+
+**Row 03 now:** 03 · Custom denim jacket · Portfolio → · Start a jacket → · Free 15 minute call →
+
+**Note:** the row name already links to the same instagram, so that destination is now reachable two ways from one row. Left as asked.
+
+**Undo:** delete the `Portfolio &rarr;` anchor from the `.pr` block.
