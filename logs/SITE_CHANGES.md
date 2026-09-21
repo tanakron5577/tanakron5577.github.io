@@ -108,3 +108,18 @@ Kept and reworded on his order ("try it here stays for sure" / "and make it 10 s
 **Note:** the price still reads `$4,000 + $1,500 / mo`, which carries the install-then-monthly shape on its own, so nothing became unclear.
 
 **Undo:** put the `<small>Install, then monthly</small>` back immediately after the price.
+
+### 2026-09-21 (same day, follow-up) — Agencies linked on row 02
+
+**Why:** Lawrence: "these hyperlink to the googlesheets page at the bottom to contact them" — TAG Talent (TX) · Rage Talent (CA).
+
+**BEFORE:** `<div class="pr">Represented<small>TAG Talent (TX) &middot; Rage Talent (CA)</small></div>` — plain text, not clickable.
+
+**AFTER:** each agency name is its own link to the credits sheet, the same destination the bottom "Credits →" button opens:
+`https://docs.google.com/spreadsheets/d/1e1U3E8objQgBxJlchwm96cCpPX10MO0QR6YbripdG94/edit`
+
+**Also added, one CSS rule:** `.pr small a` gets the house red underline (same treatment as `.nm a`, offset tightened to 4px for the smaller type). Without it the global `a{color:inherit;text-decoration:none}` would have rendered them as plain grey text and nobody would know to tap.
+
+**Verified:** on a local copy at phone width, both anchors resolve to the sheet and the computed underline colour is rgb(142, 22, 32).
+
+**Undo:** unwrap the two anchors back to plain text, and delete the `.pr small a` rule.
