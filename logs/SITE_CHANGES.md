@@ -62,3 +62,24 @@ Kept and reworded on his order ("try it here stays for sure" / "and make it 10 s
 **Undo:** restore that backup, or paste the BEFORE blocks back in, then read the live page back.
 
 **Metric:** unmeasurable on its own. Recorded so it can be undone exactly.
+
+## 2026-09-21 — Home Team row (06) benefit copy pulled
+
+**Why:** Lawrence's order, same session as the Swish and denim pullbacks. He quoted the benefit paragraph alone this time, so only that came out.
+
+**Changed:** `index.html`, row 06.
+
+**BEFORE — benefit line (`.ben`):**
+> You cannot actually leave. Not a weekend, not a day, because what breaks breaks quietly and you are the only one looking. **Thirteen stations watch all of it overnight.** You wake up to one short list, most of it already handled.
+
+**AFTER:** empty `<div class="ben">` with a dated comment.
+
+**Still live in this row, untouched:** the number 06, the name "Home Team" (no link, same as before), "Founder run Shopify & Amazon brands", the price `$4,000 + $1,500 / mo`, the sub-line "Install, then monthly", and both CTAs: "Book the install →" (Stripe buy.stripe.com/28EfZb6KV4fv5ny9U73ZK02) and "Free 15 minute call →" (Calendly).
+
+**Note:** unlike rows 03 and 05, this row still carries its price and its audience line. Nothing here is a mismatch.
+
+**Backup:** `index.html.bak-2026-09-21-pre-hometeam` (full file, pre-change).
+
+**Undo:** restore that backup, or paste the BEFORE paragraph back into the row, then read the live page back.
+
+**Metric:** unmeasurable on its own. Recorded so it can be undone exactly.
