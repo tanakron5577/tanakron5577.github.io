@@ -32,3 +32,33 @@ Kept and reworded on his order ("try it here stays for sure" / "and make it 10 s
 **Resolved in session:** the price came out too. The Stripe payment link itself is untouched and still live; it is only unlinked from this row.
 
 **Metric:** unmeasurable on its own (no analytics split by row). Recorded so it can be undone exactly.
+
+## 2026-09-21 — Custom denim row (03) pulled back, and renamed
+
+**Why:** Lawrence's order, same session as the Swish pullback: he quoted the copy block and said remove, then "change to CUSTOM DENIM JACKET."
+
+**Changed:** `index.html`, row 03.
+
+**BEFORE — name:** `Custom denim`
+**AFTER — name:** `Custom denim jacket` (same link, instagram.com/craneseyeview)
+
+**BEFORE — collaborator line (`.for`):**
+> With @craneseyeview · One of one
+
+**BEFORE — benefit line (`.ben`):**
+> That jacket had a whole life before it got to you. **We find it, then build your story into the patches and the placement.** Yours is the second life it gets. Priced by how many patches your story takes.
+
+**BEFORE — price block:**
+`$250 to start` + `<small>Credited to the piece</small>`
+
+**AFTER:** all three are empty divs carrying dated comments, so the grid keeps its shape.
+
+**Still live in this row:** the number 03, the name "Custom denim jacket" linking to the @craneseyeview instagram, and both CTAs: "Start a jacket →" (Stripe buy.stripe.com/fZu28l8T313j03e8Q33ZK04) and "Free 15 minute call →" (Calendly, prefilled a2=Custom denim jacket).
+
+**Flag for Lawrence:** the Stripe button still charges **$250** on the other side, but the page no longer says so. Someone clicks "Start a jacket" and meets a price they were not shown. Decide whether the price goes back, the button comes out, or it stays as is.
+
+**Backup:** `index.html.bak-2026-09-21-pre-denim` (full file, pre-change).
+
+**Undo:** restore that backup, or paste the BEFORE blocks back in, then read the live page back.
+
+**Metric:** unmeasurable on its own. Recorded so it can be undone exactly.
